@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-surface: #fdf7ff;
+    --color-surface-container-low: #f8f1ff;
+    --color-surface-container: #f3eaff;
+    --color-surface-container-high: #eee4ff;
+    --color-surface-container-highest: #e8ddff;
+    
+    --color-on-surface: #200d4c;
+    --color-on-surface-variant: #414655;
+    
+    --color-primary: #0056c4;
+    --color-primary-container: #006df5;
+    
+    --color-tertiary-fixed: #6bfad8;
+    --color-on-tertiary-fixed-variant: #005142;
+    
+    --color-surface-dim: #e1d4ff;
+  }
+
+  .dark {
+    --color-surface: #020617; /* slate-950 */
+    --color-surface-container-low: #0f172a; /* slate-900 */
+    --color-surface-container: #1e293b; /* slate-800 */
+    --color-surface-container-high: #334155; /* slate-700 */
+    --color-surface-container-highest: #475569; /* slate-600 */
+    
+    --color-on-surface: #f8fafc; /* slate-50 */
+    --color-on-surface-variant: #e2e8f0; /* slate-200 */
+    
+    --color-primary: #3b82f6; 
+    --color-primary-container: #60a5fa;
+    
+    --color-tertiary-fixed: #2dd4bf; 
+    --color-on-tertiary-fixed-variant: #ccfbf1;
+    
+    --color-surface-dim: #334155;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-inter antialiased transition-colors duration-300;
+  }
+}
+
+/* lenis global styles to ensure smooth scrolling functions structurally */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
