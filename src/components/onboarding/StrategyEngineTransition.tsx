@@ -26,7 +26,7 @@ const StrategyEngineTransition: React.FC<StrategyEngineTransitionProps> = ({ onC
 
   // Handle variable duration step changes
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setTimeout>;
 
     const runStep = () => {
       if (currentStep < STEPS.length - 1) {

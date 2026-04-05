@@ -70,7 +70,7 @@ const ResumeDropzone: React.FC<ResumeDropzoneProps> = ({ onSuccessComplete }) =>
       </div>
 
       <motion.div
-        {...getRootProps()}
+        {...(getRootProps() as any)}
         className={`w-full relative overflow-hidden flex flex-col items-center justify-center p-12 cursor-pointer transition-colors duration-300 border-2 border-dashed rounded-3xl ${
           isDragActive 
             ? 'border-blue-500 bg-blue-500/10' 
